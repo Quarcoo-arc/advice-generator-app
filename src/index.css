@@ -23,12 +23,45 @@ code {
 
 .advice {
   margin: 10% auto;
-  height: 250px;
-  width: 400px;
+  height: 300px;
+  width: 500px;
   background-color: var(--neutral-grey);
   color: var(--primary-cyan);
-  padding: 3rem 0;
+  padding: 2rem 0.5rem;
   text-align: center;
   border-radius: 0.5rem;
   box-sizing: border-box;
+  position: relative;
+  align-items: center;
+}
+
+.adviceId {
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.adviceText {
+  font-size: var(--quote-size);
+}
+
+.divider {
+  width: 85%;
+  margin: auto;
+}
+
+.diceWrapper {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  bottom: -1.6rem;
+  right: 41.5%;
+  margin: auto;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+}
+
+.dice {
+  margin: 25%;
 }

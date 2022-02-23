@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-
+import { toast } from "react-toastify";
 const AdviceContext = createContext();
 
 export const AdviceContextProvider = ({ children }) => {
@@ -11,9 +11,13 @@ export const AdviceContextProvider = ({ children }) => {
   }, []);
 
   const fetchAdvice = async () => {
-    const response = await fetch("https://api.adviceslip.com/advice");
-    const { slip } = await response.json();
-    setAdvice(slip);
+    try {
+      const response = await fetch("https://api.adviceslip.com/advice");
+      const { slip } = await response.json();
+      setAdvice(slip);
+    } catch (error) {
+      toast.error("Could not fetch advice!");
+    }
   };
 
   return (
