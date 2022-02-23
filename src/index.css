@@ -8,6 +8,10 @@
   --screen-size-desktop: 1440px;
 }
 
+html {
+  position: relative;
+}
+
 body {
   margin: 0;
   font-family: "Manrope", "Segoe UI", "Roboto", "Oxygen", sans-serif;
@@ -70,6 +74,20 @@ code {
   margin: 25%;
 }
 
+footer {
+  position: absolute;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+  bottom: 0;
+  color: var(--primary-cyan);
+}
+
+footer a {
+  color: #00cc66;
+  text-decoration: none;
+}
+
 .loadingSpinnerContainer {
   position: fixed;
   top: 0;
@@ -91,6 +109,7 @@ code {
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
