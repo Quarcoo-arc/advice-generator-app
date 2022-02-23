@@ -1,10 +1,13 @@
 import Advice from "./components/Advice";
+import { AdviceContextProvider } from "./context/AdviceContext";
 
 function App() {
   return (
-    <div>
-      <Advice />
-    </div>
+    <AdviceContextProvider>
+      <div>
+        <Advice />
+      </div>
+    </AdviceContextProvider>
   );
 }
 

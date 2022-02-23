@@ -11,6 +11,7 @@
 body {
   margin: 0;
   font-family: "Manrope", "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  background-color: var(--neutral-violet);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,4 +19,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.advice {
+  margin: 10% auto;
+  height: 250px;
+  width: 400px;
+  background-color: var(--neutral-grey);
+  color: var(--primary-cyan);
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
