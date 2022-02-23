@@ -5,10 +5,22 @@ const AdviceContext = createContext();
 export const AdviceContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [advice, setAdvice] = useState(null);
+  const [minWidth, setMinWidth] = useState(false);
 
   useEffect(() => {
+    reportWindowSize();
     fetchAdvice();
   }, []);
+
+  function reportWindowSize() {
+    if (window.outerWidth <= 375) {
+      setMinWidth(true);
+    } else {
+      setMinWidth(false);
+    }
+  }
+
+  window.onresize = reportWindowSize;
 
   const fetchAdvice = async () => {
     try {
@@ -22,7 +34,7 @@ export const AdviceContextProvider = ({ children }) => {
 
   return (
     <AdviceContext.Provider
-      value={{ loading, advice, setLoading, fetchAdvice }}
+      value={{ loading, advice, minWidth, setLoading, fetchAdvice }}
     >
       {children}
     </AdviceContext.Provider>
